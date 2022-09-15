@@ -1,0 +1,57 @@
+[{
+  "gender": "male",
+  "ageGroup": "age65-",
+  "percentageViewed": "6.0"
+}, {
+  "gender": "female",
+  "ageGroup": "age65-",
+  "percentageViewed": "6.3"
+}, {
+  "gender": "male",
+  "ageGroup": "age13-17",
+  "percentageViewed": "0.2"
+}, {
+  "gender": "female",
+  "ageGroup": "age13-17",
+  "percentageViewed": "0.1"
+}, {
+  "gender": "male",
+  "ageGroup": "age18-24",
+  "percentageViewed": "10.5"
+}, {
+  "gender": "female",
+  "ageGroup": "age18-24",
+  "percentageViewed": "7.8"
+}, {
+  "gender": "male",
+  "ageGroup": "age25-34",
+  "percentageViewed": "11.9"
+}, {
+  "gender": "female",
+  "ageGroup": "age25-34",
+  "percentageViewed": "10.1"
+}, {
+  "gender": "male",
+  "ageGroup": "age35-44",
+  "percentageViewed": "11.3"
+}, {
+  "gender": "female",
+  "ageGroup": "age35-44",
+  "percentageViewed": "11.1"
+}, {
+  "gender": "male",
+  "ageGroup": "age45-54",
+  "percentageViewed": "7.3"
+}, {
+  "gender": "female",
+  "ageGroup": "age45-54",
+  "percentageViewed": "7.1"
+}, {
+  "gender": "male",
+  "ageGroup": "age55-64",
+  "percentageViewed": "5.0"
+}, {
+  "gender": "female",
+  "ageGroup": "age55-64",
+  "percentageViewed": "5.4"
+}]
