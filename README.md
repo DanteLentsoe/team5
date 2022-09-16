@@ -46,6 +46,11 @@ There are 2 environments each corresponding to a branch on the repository:
 
 The application is deployed on [Netlify.com](```https://www.netlify.com/```)
 
+##Site 
+
+https://team5-prototype.netlify.app/#/admin/dashboard
+
+
 ## Built With
 
 Details of the tech stack that has been used.
