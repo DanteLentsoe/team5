@@ -87,12 +87,12 @@ export const barChartOptions = {
   dataLabels: {
     enabled: true,
     formatter: function (val: any) {
-      return Number(val).toLocaleString() + "";
+      return;
     },
     offsetY: -20,
     style: {
       fontSize: "12px",
-      colors: ["blue"],
+      colors: ["#222222"],
     },
   },
   xaxis: {
@@ -111,8 +111,8 @@ export const barChartOptions = {
       fill: {
         type: "gradient",
         gradient: {
-          colorFrom: "#D8E3F0",
-          colorTo: "#BED1E6",
+          colorFrom: "#C8CFCA",
+          colorTo: "#C8CFCA",
           stops: [0, 100],
           opacityFrom: 0.4,
           opacityTo: 0.5,
@@ -128,6 +128,7 @@ export const barChartOptions = {
     gradient: {
       shade: "light",
       type: "horizontal",
+      color: "#C8CFCA",
       shadeIntensity: 0.25,
       gradientToColors: undefined,
       inverseColors: true,
@@ -146,7 +147,7 @@ export const barChartOptions = {
     labels: {
       show: false,
       formatter: function (val: any) {
-        return Number(val).toLocaleString() + "€";
+        return;
       },
     },
   },
@@ -156,18 +157,22 @@ export const barChartOptions = {
     offsetY: 0,
     align: "center",
     style: {
-      color: "#444",
+      color: "#222222",
     },
   },
   chart: {
+    style: {
+      color: "#222222",
+    },
     animations: {
       enabled: false,
     },
   },
+  colors: ["#4FD1C5", "#2D3748"],
 };
 export const barChartData = [
   {
-    name: "Chiffre d’affaires",
+    name: "Percentage Difference",
     data: SOCIALS_DATA.map((item) => item.views),
   },
 ];

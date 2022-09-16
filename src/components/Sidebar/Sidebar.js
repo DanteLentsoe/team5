@@ -16,7 +16,6 @@ import {
   Icon,
 } from "@chakra-ui/react";
 import IconBox from "../Icons/IconBox";
-import { CreativeTimLogo } from "../Icons/Icons";
 import { Separator } from "../Separator/Separator";
 import PropTypes from "prop-types";
 import { useState, useRef } from "react";
@@ -418,7 +417,6 @@ export const SidebarResponsive = (props) => {
         href={`${process.env.PUBLIC_URL}/#/`}
         onClick={() => {
           window.location.reload();
-          console.log("CLICKED");
         }}
         target="_blank"
         display="flex"
@@ -428,7 +426,6 @@ export const SidebarResponsive = (props) => {
         justifyContent="center"
         alignItems="center"
         fontSize="11px">
-        <CreativeTimLogo w="32px" h="32px" me="10px" />
         <Text fontSize="sm" mt="3px">
           {logoText}
         </Text>
@@ -478,7 +475,12 @@ export const SidebarResponsive = (props) => {
             <Box maxW="100%" h="100vh">
               <Box>{brand}</Box>
               <Stack direction="column" mb="40px">
-                <Box>{links}</Box>
+                <Box
+                  onClick={() => {
+                    window.location.reload();
+                  }}>
+                  {links}
+                </Box>
               </Stack>
             </Box>
           </DrawerBody>

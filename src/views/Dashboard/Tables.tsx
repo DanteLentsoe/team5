@@ -1,4 +1,5 @@
 import {
+  Box,
   Flex,
   Table,
   Tbody,
@@ -16,6 +17,7 @@ import { useRecoilValue } from "recoil";
 import { searchTextTableData, VideoAnalyticsType } from "../../store/atom";
 import TABLE_DATA from "../../data/table.json";
 import Fuse from "fuse.js";
+import NoResults from "../../assets/svg/SVG";
 
 const Tables = () => {
   const textColor = useColorModeValue("gray.700", "white");
@@ -44,31 +46,48 @@ const Tables = () => {
           </Text>
         </CardHeader>
         <CardBody>
-          <Table variant="simple" color={textColor}>
-            <Thead>
-              <Tr my=".8rem" pl="0px" color="gray.400">
-                <Th pl="0px" color="gray.400">
-                  Video Title
-                </Th>
-                <Th color="gray.400">Views</Th>
-                <Th color="gray.400">Dislikes</Th>
-                <Th color="gray.400">Comments</Th>
-                <Th></Th>
-              </Tr>
-            </Thead>
-            <Tbody>
-              {videoPerformanceResults?.map((row: VideoAnalyticsType) => {
-                return (
-                  <TablesTableRow
-                    videoTitle={row.videoTitle as string}
-                    dislilkes={row.dislikes}
-                    views={row.views}
-                    comments={row.comments}
-                  />
-                );
-              })}
-            </Tbody>
-          </Table>
+          {videoPerformanceResults?.length > 0 ? (
+            <Table variant="simple" color={textColor}>
+              <Thead>
+                <Tr my=".8rem" pl="0px" color="gray.400">
+                  <Th pl="0px" color="gray.400">
+                    Video Title
+                  </Th>
+                  <Th color="gray.400">Views</Th>
+                  <Th color="gray.400">Dislikes</Th>
+                  <Th color="gray.400">Comments</Th>
+                  <Th></Th>
+                </Tr>
+              </Thead>
+              <Tbody>
+                {videoPerformanceResults?.map((row: VideoAnalyticsType) => {
+                  return (
+                    <TablesTableRow
+                      videoTitle={row.videoTitle as string}
+                      dislilkes={row.dislikes}
+                      views={row.views}
+                      comments={row.comments}
+                    />
+                  );
+                })}
+              </Tbody>
+            </Table>
+          ) : (
+            <>
+              <Text>
+                No results found for <Text color={"#4FD1C5"}>{query}</Text>
+              </Text>
+              <Flex w={"full"} alignItems={"center"} justifyContent={"center"}>
+                <Box
+                  alignItems={"center"}
+                  justifyContent={"center"}
+                  height={{ sm: "24rem", lg: "28rem" }}
+                  mt={{ base: 12, sm: 16 }}>
+                  <NoResults />
+                </Box>
+              </Flex>
+            </>
+          )}
         </CardBody>
       </Card>
     </Flex>

@@ -13,6 +13,7 @@ import routes from "../../routes";
 import { SetStateAction } from "react";
 import { useRecoilState } from "recoil";
 import { searchVideoAnalyticsVideo } from "../../store/atom";
+import { useLocation } from "react-router-dom";
 
 const HeaderLinks = (props: {
   [x: string]: any;
@@ -25,7 +26,7 @@ const HeaderLinks = (props: {
 }) => {
   const { variant, children, fixed, secondary, onOpen, ...rest } = props;
   const [query, setQuery] = useRecoilState(searchVideoAnalyticsVideo);
-
+  const location = useLocation();
   // Chakra Color Mode
   let mainTeal = useColorModeValue("teal.300", "teal.300");
   let inputBg = useColorModeValue("white", "gray.800");
@@ -35,7 +36,6 @@ const HeaderLinks = (props: {
   if (secondary) {
     mainText = "white";
   }
-
   const handleChange = (event: {
     target: { value: SetStateAction<string> };
   }) => {
@@ -48,48 +48,50 @@ const HeaderLinks = (props: {
       w={{ sm: "100%", md: "auto" }}
       alignItems="center"
       flexDirection="row">
-      <InputGroup
-        cursor="pointer"
-        bg={inputBg}
-        borderRadius="15px"
-        w={{
-          sm: "128px",
-          md: "200px",
-        }}
-        me={{ sm: "auto", md: "20px" }}
-        _focus={{
-          borderColor: { mainTeal },
-        }}
-        _active={{
-          borderColor: { mainTeal },
-        }}>
-        <InputLeftElement
-          children={
-            <IconButton
-              bg="inherit"
-              borderRadius="inherit"
-              _active={{
-                bg: "inherit",
-                transform: "none",
-                borderColor: "transparent",
-              }}
-              _focus={{
-                boxShadow: "none",
-              }}
-              icon={<SearchIcon color={searchIcon} w="15px" h="15px" />}
-              aria-label={""}></IconButton>
-          }
-        />
-        <Input
-          fontSize="xs"
-          py="11px"
-          color={mainText}
-          onChange={handleChange}
-          value={query as string}
-          placeholder="Type here..."
-          borderRadius="inherit"
-        />
-      </InputGroup>
+      {location.pathname === "/admin/tables" && (
+        <InputGroup
+          cursor="pointer"
+          bg={inputBg}
+          borderRadius="15px"
+          w={{
+            sm: "128px",
+            md: "200px",
+          }}
+          me={{ sm: "auto", md: "20px" }}
+          _focus={{
+            borderColor: { mainTeal },
+          }}
+          _active={{
+            borderColor: { mainTeal },
+          }}>
+          <InputLeftElement
+            children={
+              <IconButton
+                bg="inherit"
+                borderRadius="inherit"
+                _active={{
+                  bg: "inherit",
+                  transform: "none",
+                  borderColor: "transparent",
+                }}
+                _focus={{
+                  boxShadow: "none",
+                }}
+                icon={<SearchIcon color={searchIcon} w="15px" h="15px" />}
+                aria-label={""}></IconButton>
+            }
+          />
+          <Input
+            fontSize="xs"
+            py="11px"
+            color={mainText}
+            onChange={handleChange}
+            value={query as string}
+            placeholder="Type here..."
+            borderRadius="inherit"
+          />
+        </InputGroup>
+      )}
 
       <SidebarResponsive
         logoText={props.logoText}
