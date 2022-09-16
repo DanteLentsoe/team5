@@ -98,3 +98,8 @@ A basic architecture diagram or description of the chosen architecture should be
 | Version | Author                              | Date       |
 | ------- | ----------------------------------- | ---------- |
 | 0.0.4   | Dante Lentsoe <dllentsoe@gmail.com> | 016/09/2022|
+
+
+<img width="1427" alt="Screenshot 2022-09-16 at 10 32 16" src="https://user-images.githubusercontent.com/65385487/190596095-a1343845-e372-4244-8bb0-a824a1367c20.png">
+<img width="1439" alt="Screenshot 2022-09-16 at 10 32 25" src="https://user-images.githubusercontent.com/65385487/190596106-49c62293-05e7-4810-b6dc-261ed37dfa6d.png">
+
