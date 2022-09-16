@@ -1,46 +1,100 @@
-# Getting Started with Create React App
+# freelance-hub
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Team5 is an application intented on showcasing usage of data visualization, search filters etc. it helps logging data in order to track changes in your API (with visualizations).
 
-## Available Scripts
 
-In the project directory, you can run:
+## Getting Started
 
-### `yarn start`
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Prerequisites
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- [yarn](https://classic.yarnpkg.com/en/)npm i yarn
+- [Node](https://nodejs.org/en/) minimum v12.3.0
 
-### `yarn test`
+### Installing
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Clone the repository using HTTPS
 
-### `yarn build`
+```
+git clone https://github.com/DanteLentsoe/team5.git
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+cd team5
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+cd client && yarn && cd ..
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Run Client
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+cd client yarn dev
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- yarn start
+  Client Endpoint : http://localhost:3000
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Environments
 
-## Learn More
+There are 2 environments each corresponding to a branch on the repository:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Production - `master` branch
+- Development - `dev` branch
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Deployment
+
+The application is deployed on [Netlify.com](```https://www.netlify.com/```)
+
+## Built With
+
+Details of the tech stack that has been used.
+
+## Client
+
+- [Typescript](https://www.typescriptlang.org/)
+- [React](https://create-react-app.dev/)
+- [Chakra UI](https://chakra-ui.com/)
+
+
+## Architecture
+
+A basic architecture diagram or description of the chosen architecture should be detailed here. Lol, I did not include it.
+
+
+
+## Authors
+
+- **Dante Lentsoe** <dllentsoe@gmail.com>
+
+## Licenses
+
+```
+├─ MIT: 953
+├─ ISC: 78
+├─ BSD-3-Clause: 37
+├─ BSD-2-Clause: 29
+├─ Apache-2.0: 26
+├─ MIT*: 8
+├─ BSD: 5
+├─ (MIT OR CC0-1.0): 5
+├─ CC0-1.0: 4
+├─ WTFPL: 2
+├─ Unlicense: 2
+├─ 0BSD: 2
+├─ Custom: https://github.com/tmcw/jsonlint: 1
+├─ BSD-3-Clause OR MIT: 1
+├─ (MIT OR Apache-2.0): 1
+├─ CC-BY-4.0: 1
+├─ Public Domain: 1
+├─ AFLv2.1,BSD: 1
+├─ (MIT AND Zlib): 1
+├─ (MIT AND BSD-3-Clause): 1
+└─ CC-BY-3.0: 1
+```
+
+## Meta
+
+| Version | Author                              | Date       |
+| ------- | ----------------------------------- | ---------- |
+| 0.0.4   | Dante Lentsoe <dllentsoe@gmail.com> | 016/09/2022|
