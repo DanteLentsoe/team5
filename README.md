@@ -1,4 +1,4 @@
-# freelance-hub
+# TEAM5
 
 Team5 is an application intented on showcasing usage of data visualization, search filters etc. it helps logging data in order to track changes in your API (with visualizations).
 
